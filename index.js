@@ -5,7 +5,7 @@ const mineflayer = require("mineflayer");
 const classofRaw = require('./node_modules/core-js-pure/internals/classof-raw');
 var creazy = false;
 var look = false;
-var actions = ['forward', 'left', 'right'];
+var actions = ['forward', 'left', 'right', 'sneak', 'jump', 'back'];
 var spawCounter = 0;
 
 
@@ -169,6 +169,12 @@ async function doActivity(cmd)
         case "RMB":
             bot.activateEntity(bot.nearestEntity());
             break;
+        case "Space":
+            bot.setControlState("jump", true);
+            break;
+        case "Ctrl":
+            bot.setControlState("sneak", true);
+            break;
         case "Walk":
             creazy = true;
             break;
@@ -192,12 +198,12 @@ function walkAround()
 {
     let r = Math.round(rand(1, actions.length - 1));
 
-    if ((bot.time.timeOfDay % 100) == 89)
+    if ((bot.time.timeOfDay % 100) > 50)
     {
         bot.setControlState(actions[r], true);
     }
 
-    if ((bot.time.timeOfDay % 100) == 9)
+    if ((bot.time.timeOfDay % 100) <= 50)
     {
         bot.clearControlStates();
     }
@@ -214,7 +220,8 @@ function afterWhisper(userName, message)
 
     let rnr = rand(1, 4);
 
-    if (userName == data["bot-owner"]) {
+    if (isMember(userName, data["bot-owners"])) 
+    {
         if (rnr <= 3) {
             if (message.endsWith("!")) {
                 doActivity(message.substring(0, message.length - 1));
@@ -228,12 +235,26 @@ function afterWhisper(userName, message)
         }
     }
     else {
-        if (rnr <= 3) {
+        if (rnr <= 3)
+        {
             bot.chat("/msg " + userName + " " + message);
+            bot.chat("/msg " + data["bot-owners"][0] + " " + userName + " whispered to me: " + message);
         }
         else {
             bot.chat("/msg " + userName + " " + data["first-message"]);
+            bot.chat("/msg " + data["bot-owners"][0] + " " + userName + " whispered to me: " + message);
+        }
+    }   
+}
+
+function isMember(element, table)
+{
+    for (let i = 0; i < table.length; i++)
+    {
+        if (element == table[i])
+        {
+            return true;
         }
     }
-   
+    return false;
 }

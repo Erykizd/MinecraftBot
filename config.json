@@ -8,7 +8,7 @@
 	"register-cmd": "/register zaq12wsx zaq12wsx",
 	"login-cmd": "/login zaq12wsx",
 	"first-message": "Dupa",
-	"bot-owner": "Erykgtav",
+	"bot-owners": ["Erykgtav","ErykKoks","Erykizd","WujaJurek"],
 	"tp-to-owner": "/tpa Erykgtav"
 }
  
