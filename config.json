@@ -1,0 +1,14 @@
+{
+	"ip":"bfsmc.pl",
+	"port": 25565,
+	"forced-version": true,
+	"mc-version": "1.19",
+	"name": "Pedalczuk",
+	"login-enabled":"true",
+	"register-cmd": "/register zaq12wsx zaq12wsx",
+	"login-cmd": "/login zaq12wsx",
+	"first-message": "Dupa",
+	"bot-owner": "Erykgtav",
+	"tp-to-owner": "/tpa Erykgtav"
+}
+ 

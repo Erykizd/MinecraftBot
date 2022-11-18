@@ -1,0 +1,21 @@
+{
+  "name": "minecraft-bot",
+  "version": "0.0.0",
+  "description": "MinecraftBot",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0"
+  },
+  "eslintConfig": {},
+  "dependencies": {
+    "chalk": "^5.1.2",
+    "es": "^0.8.0",
+    "fs": "^0.0.1-security",
+    "minecraft-protocol": "^1.36.1",
+    "mineflayer": "^4.5.1",
+    "mineflayer-cmd": "^1.1.3"
+  }
+}

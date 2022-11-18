@@ -1,0 +1,3 @@
+D:\js scripts\Minecraft Bot\MinecraftBot\obj\Debug\MinecraftBot.njsproj.AssemblyReference.cache
+D:\js scripts\Minecraft Bot\MinecraftBot\obj\Debug\MinecraftBot.njsproj.CoreCompileInputs.cache
+D:\js scripts\Minecraft Bot\MinecraftBot\bin\Microsoft.NodejsTools.WebRole.dll
