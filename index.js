@@ -222,7 +222,7 @@ function afterWhisper(userName, message)
 
     if (isMember(userName, data["bot-owners"])) 
     {
-        if (rnr <= 3) {
+        if (rnr <= 2) {
             if (message.endsWith("!")) {
                 doActivity(message.substring(0, message.length - 1));
             }
@@ -235,12 +235,13 @@ function afterWhisper(userName, message)
         }
     }
     else {
-        if (rnr <= 3)
+        if (rnr <= 2)
         {
             bot.chat("/msg " + userName + " " + message);
             bot.chat("/msg " + data["bot-owners"][0] + " " + userName + " whispered to me: " + message);
         }
-        else {
+        else 
+        {
             bot.chat("/msg " + userName + " " + data["first-message"]);
             bot.chat("/msg " + data["bot-owners"][0] + " " + userName + " whispered to me: " + message);
         }
