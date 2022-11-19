@@ -3,7 +3,7 @@
 	"port": 25565,
 	"forced-version": true,
 	"mc-version": "1.19",
-	"name": "Pedalczuk",
+	"name": "ChlebowaBestia",
 	"login-enabled":"true",
 	"register-cmd": "/register zaq12wsx zaq12wsx",
 	"login-cmd": "/login zaq12wsx",
