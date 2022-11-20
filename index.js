@@ -82,8 +82,6 @@ bot.on('chat', async (name, msg) =>
 {
     let message = "" + msg;
     let userName = "" + name;
-
-    console.log(userName + " wrote: " + message);
     
     if (message.startsWith('Gracz ')) {
         message = message.replace('Gracz ', '');
@@ -218,12 +216,13 @@ async function lookAtNearestEntity()
 function afterWhisper(userName, message)
 {
 
-    let rnr = rand(1, 4);
+    let rnr = rand(0, 100);
 
     if (isMember(userName, data["bot-owners"])) 
     {
-        if (rnr <= 2) {
-            if (message.endsWith("!")) {
+        if (rnr <= 70) {
+            if (message.endsWith("!")) 
+			{
                 doActivity(message.substring(0, message.length - 1));
             }
             else {
@@ -235,7 +234,7 @@ function afterWhisper(userName, message)
         }
     }
     else {
-        if (rnr <= 2)
+        if (rnr <= 70)
         {
             bot.chat("/msg " + userName + " " + message);
             bot.chat("/msg " + data["bot-owners"][0] + " " + userName + " whispered to me: " + message);
