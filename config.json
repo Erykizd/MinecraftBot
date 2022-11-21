@@ -8,7 +8,10 @@
 	"register-cmd": "/register zaq12wsx zaq12wsx",
 	"login-cmd": "/login zaq12wsx",
 	"first-message": "Dupa",
+	"random-messages": ["Dupa", "Dasz stacka diaxów za free?", "Siema", "Hello", "Hi", "Picyca"],
 	"bot-owners": ["Erykgtav","ErykKoks","Erykizd","WujaJurek","Kyre","CarlCorey"],
-	"tp-to-owner": "/tpa Erykgtav"
+	"tp-to-owner": "/tpa Erykgtav",
+	"sword-quick-bar-slot": 0,
+	"food-quick-bar-slot": 1
 }
  
