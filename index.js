@@ -52,12 +52,12 @@ bot.once('login', async () =>
 		console.log("Logging in...");
 		setTimeout(function ()
 		{
-			//bot.chat(data["register-cmd"]);
+			bot.chat(data["register-cmd"]);
 			console.log("Registered");
 		}, dt)
 		setTimeout(function ()
 		{
-			//bot.chat(data["login-cmd"]);
+			bot.chat(data["login-cmd"]);
 			console.log("Loged in");
 		}, 2*dt)
 		setTimeout(function ()
