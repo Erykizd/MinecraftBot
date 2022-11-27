@@ -1,17 +1,17 @@
+
 {
 	"ip":"bfsmc.pl",
 	"port": 25565,
 	"forced-version": true,
 	"mc-version": "1.19",
-	"name": "ChlebowaBestia",
+	"name": "PrzydupasEryka",
 	"login-enabled":"true",
 	"register-cmd": "/register zaq12wsx zaq12wsx",
 	"login-cmd": "/login zaq12wsx",
 	"first-message": "Dupa",
 	"random-messages": ["Dupa", "Dasz stacka diaxów za free?", "Siema", "Hello", "Hi", "Picyca"],
-	"bot-owners": ["Erykgtav","ErykKoks","Erykizd","WujaJurek","Kyre","CarlCorey"],
+	"bot-owners": ["Erykgtav","Erykgtaiv","Erykgta3","ErykKoks","Erykizd","WujaJurek","Kyre","CarlCorey","Picyca"],
 	"tp-to-owner": "/tpa Erykgtav",
 	"sword-quick-bar-slot": 0,
 	"food-quick-bar-slot": 1
 }
- 

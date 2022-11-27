@@ -8,6 +8,7 @@ var creazy = false;
 var look = false;
 var kill = false;
 var killAll = false;
+var fishing = false;
 var follow = false;
 var write = false;
 var sheildOrFood = false;
@@ -206,7 +207,7 @@ function rand(min, max)
 
 async function doActivity(cmd)
 {
-    console.log("Do " + cmd);
+    console.log(cmd + "!");
 
 	if(cmd.startsWith("Choose quick slot "))
 	{
@@ -264,11 +265,13 @@ async function doActivity(cmd)
 		case "Kill":
             kill = true;
 			killAll = false;
+			find_sword_slot();
             break;
 		case "Kill all":
 			kill = true;
             killAll = true;
-            break;
+            find_sword_slot();
+			break;
 		case "Follow":
 			follow = true;
             break;
@@ -285,11 +288,15 @@ async function doActivity(cmd)
 		case "Swap hands items":
 			bot.equip(bot.heldItem, "off-hand");
 			break;
-		case "Drop stack":
+		case "Q":
 			if(bot.heldItem.count>0)
 			{
 				bot.tossStack(bot.heldItem);
 			}
+			break;
+		case "Fish":
+			fishing = true;
+			fish();
 			break;
 		case "Stop":
 			bot.clearControlStates();
@@ -299,6 +306,7 @@ async function doActivity(cmd)
 			kill = false;
 			killAll = false;
 			follow = false;
+			fishing = false;
 			break;
     }
 }
@@ -526,5 +534,45 @@ function getRandomMember(table=[])
 	else
 	{
 		return null; 
+	}
+}
+
+function find_sword_slot()
+{
+		for(let i = 0; i<9; i++)
+		{
+			bot.setQuickBarSlot(i);
+			if(bot.heldItem.name.includes("sword"))
+			{
+				data["sword-quick-bar-slot"] = i;
+				return 0;
+			}
+		}
+}
+
+function findFishingRod()
+{
+			for(let i = 0; i<9; i++)
+		{
+			bot.setQuickBarSlot(i);
+			if(bot.heldItem.name.includes("fishing_rod"))
+			{
+				return 0;
+			}
+		}
+}
+
+function fish()
+{
+	findFishingRod();
+	if (fishing)
+    {
+		bot.deactivateItem(false);
+        bot.activateItem(false);
+		setTimeout(function(){fish()},15000)
+    }
+	else
+	{
+		bot.deactivateItem(false);
 	}
 }
