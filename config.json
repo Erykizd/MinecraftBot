@@ -1,17 +1,15 @@
-
 {
-	"ip":"bfsmc.pl",
+	"ip":"stylowamc.pl",
 	"port": 25565,
 	"forced-version": true,
 	"mc-version": "1.19",
-	"name": "PrzydupasEryka",
+	"names": ["Pedalczuk", "Pedro", "Podjuchy"],
 	"login-enabled":"true",
-	"register-cmd": "/register zaq12wsx zaq12wsx",
-	"login-cmd": "/login zaq12wsx",
-	"first-message": "Dupa",
-	"random-messages": ["Dupa", "Dasz stacka diaxów za free?", "Siema", "Hello", "Hi", "Picyca"],
+	"register-cmd": "/register zaq123edc zaq123edc",
+	"login-cmd": "/login zaq123edc",
+	"random-messages": ["Dupa", "Dasz stacka diaxów za free?", "Siema", "Hello", "Hi", "Picyca", "Elo"],
 	"bot-owners": ["Erykgtav","Erykgtaiv","Erykgta3","ErykKoks","Erykizd","WujaJurek","Kyre","CarlCorey","Picyca"],
-	"tp-to-owner": "/tpa Erykgtav",
+	"tp-to-owner": "/tpa Erykizd",
 	"sword-quick-bar-slot": 0,
 	"food-quick-bar-slot": 1
 }

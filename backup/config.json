@@ -1,0 +1,15 @@
+{
+	"ip":"localhost",
+	"port": 50667,
+	"forced-version": true,
+	"mc-version": "1.19",
+	"names": ["Pedalczuk", "Pedro", "Podjuchy"],
+	"login-enabled":"true",
+	"register-cmd": "/register zaq123edc zaq123edc",
+	"login-cmd": "/login zaq123edc",
+	"random-messages": ["Dupa", "Dasz stacka diaxów za free?", "Siema", "Hello", "Hi", "Picyca", "Elo"],
+	"bot-owners": ["Erykgtav","Erykgtaiv","Erykgta3","ErykKoks","Erykizd","WujaJurek","Kyre","CarlCorey","Picyca"],
+	"tp-to-owner": "/tpa Erykizd",
+	"sword-quick-bar-slot": 0,
+	"food-quick-bar-slot": 1
+}
